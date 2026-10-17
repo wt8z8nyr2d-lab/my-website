@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --hero-bg-from: #f8fafc;
+  --hero-bg-via: #e0f2fe;
+  --hero-bg-to: #f1f5f9;
+  --hero-scrim: rgba(248, 250, 252, 0.4);
+  --hero-text: #0f172a;
+  --hero-text-muted: #475569;
+  --hero-particle: rgba(14, 116, 144, 0.55);
+  --hero-line: rgba(14, 116, 144, 0.16);
+  --nav-bg: rgba(248, 250, 252, 0.82);
+  --nav-border: rgba(15, 23, 42, 0.08);
+}
+
+.dark {
+  color-scheme: dark;
+  --hero-bg-from: #020617;
+  --hero-bg-via: #0f172a;
+  --hero-bg-to: #082f49;
+  --hero-scrim: rgba(2, 6, 23, 0.45);
+  --hero-text: #f8fafc;
+  --hero-text-muted: #cbd5e1;
+  --hero-particle: rgba(34, 211, 238, 0.65);
+  --hero-line: rgba(34, 211, 238, 0.2);
+  --nav-bg: rgba(2, 6, 23, 0.82);
+  --nav-border: rgba(248, 250, 252, 0.12);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--hero-bg-from);
+}
+
+#root {
+  min-height: 100svh;
+}

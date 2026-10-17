@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function () {
+        var stored = null
+        try {
+          stored = localStorage.getItem('theme')
+        } catch (error) {}
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        var dark = stored === 'dark' || (stored !== 'light' && prefersDark)
+        document.documentElement.classList.toggle('dark', dark)
+      })()
+    </script>
+    <title>Young.Chou | 前端工程师与独立开发者</title>
+    <meta
+      name="description"
+      content="Young.Chou 的个人品牌站：前端工程师、独立开发者，展示项目作品、技术实践与个人简介。"
+    />
+    <meta name="author" content="Young.Chou" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://wt8z8nyr2d-lab.github.io/my-website/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Young.Chou" />
+    <meta property="og:title" content="Young.Chou | 前端工程师与独立开发者" />
+    <meta
+      property="og:description"
+      content="Young.Chou 的个人品牌站：前端工程师、独立开发者，展示项目作品、技术实践与个人简介。"
+    />
+    <meta property="og:url" content="https://wt8z8nyr2d-lab.github.io/my-website/" />
+    <meta property="og:image" content="https://wt8z8nyr2d-lab.github.io/my-website/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Young.Chou | 前端工程师与独立开发者" />
+    <meta
+      name="twitter:description"
+      content="Young.Chou 的个人品牌站：前端工程师、独立开发者，展示项目作品、技术实践与个人简介。"
+    />
+    <meta name="twitter:image" content="https://wt8z8nyr2d-lab.github.io/my-website/og-image.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
